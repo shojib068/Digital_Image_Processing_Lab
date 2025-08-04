@@ -3,25 +3,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # input image
-image_path = 'input_images/cameraman.tif'
-image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('input_images/20701068_Q7_input.tif', cv2.IMREAD_GRAYSCALE)
+
+f = np.fft.fft2(img)
 
 
-# Compute FFT and shift
-f_transform = np.fft.fft2(image)
-f_shift = np.fft.fftshift(f_transform)
-magnitude_spectrum = np.log(np.abs(f_shift) + 1)
+fshift = np.fft.fftshift(f)
 
-# Extract 1D slice from the center row
-center_row = magnitude_spectrum.shape[0] // 2
-line_data = magnitude_spectrum[center_row, :]
+magnitude_spectrum = 20 * np.log(np.abs(fshift) + 1)
 
-# Display the graph
-plt.figure(figsize=(10, 5))
-plt.plot(line_data, color='blue')
-plt.title("1D Visualization of FFT")
-plt.xlabel("Frequency Index")
-plt.ylabel("Log Magnitude")
-plt.grid(True)
+# Display Output
+plt.figure(figsize=(15, 5))
+
+plt.subplot(1, 1, 1)
+plt.imshow(magnitude_spectrum, cmap='gray')
+plt.title('FFT Magnitude Spectrum')
+plt.axis('off')
+
 plt.tight_layout()
 plt.show()

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 # Input Image
-bgr_img = cv2.imread('input_images/peppers.jpeg')
+bgr_img = cv2.imread('input_images/20701068_Q13_input.jpeg')
 # BGR to RGB
 rgb_img = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2RGB)
 

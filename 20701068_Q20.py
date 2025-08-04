@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 # input image
-img = cv2.imread('input_images/coins.jpeg')
+img = cv2.imread('input_images/20701068_Q20_input.jpeg')
 if len(img.shape) == 2:
     img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
     

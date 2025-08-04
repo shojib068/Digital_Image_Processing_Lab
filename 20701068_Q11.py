@@ -17,7 +17,7 @@ def ideal_band_reject_filter(shape, r1, r2):
     return mask
 
 # Input Image
-img = cv2.imread('input_images/cameraman.tif', 0)
+img = cv2.imread('input_images/20701068_Q11_input.tif', 0)
 
 # DFT and shift
 dft = cv2.dft(np.float32(img), flags=cv2.DFT_COMPLEX_OUTPUT)
@@ -41,12 +41,7 @@ img_back = np.uint8(img_back)
 # Display Image
 plt.figure(figsize=(10, 5))
 
-plt.subplot(1, 2, 1)
-plt.imshow(img, cmap='gray')
-plt.title('Original Image')
-plt.axis('off')
-
-plt.subplot(1, 2, 2)
+plt.subplot(1, 1, 1)
 plt.imshow(img_back, cmap='gray')
 plt.title(f'Ideal Band-Reject Filter\nBand: {r1} to {r2}')
 plt.axis('off')

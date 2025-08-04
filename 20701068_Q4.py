@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # input image
-image_path = 'input_images/cameraman.tif'  
+image_path = 'input_images/20701068_Q4_input.tif'  
 image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
 # Sobel kernels

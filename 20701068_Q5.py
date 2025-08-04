@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import random
 
 # Input Image
-image_path = 'input_images/cameraman.tif'
+image_path = 'input_images/20701068_Q5_input.tif'
 image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
 # Function to add salt and pepper noise

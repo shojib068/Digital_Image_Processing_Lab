@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Input Image
-img = cv2.imread('input_images/cameraman.tif', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('input_images/20701068_Q14_input.tif', cv2.IMREAD_GRAYSCALE)
 L = 256
 
 # Identity function

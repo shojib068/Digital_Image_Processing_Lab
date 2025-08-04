@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Input Image
-img = cv2.imread('input_images/cameraman.tif')
+img = cv2.imread('input_images/20701068_Q15_input.jpeg')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 def plot_histogram(image, title):

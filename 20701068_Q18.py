@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Input Image
-img = cv2.imread('input_images/cameraman.tif', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('input_images/20701068_Q18_input.tif', cv2.IMREAD_GRAYSCALE)
 
 # Binarize the image
 _, binary = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)

@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # input image
-image_path = 'input_images/cameraman.tif'
+image_path = 'input_images/20701068_Q6_input.tif'
 image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
 # custom sharpening kernel
@@ -30,12 +30,7 @@ sharpened_image = np.clip(sharpened_image, 0, 255).astype(np.uint8)
 
 # Display image
 plt.figure(figsize=(10, 5))
-plt.subplot(1, 2, 1)
-plt.title("Original Image")
-plt.imshow(image, cmap='gray')
-plt.axis('off')
-
-plt.subplot(1, 2, 2)
+plt.subplot(1, 1, 1)
 plt.title("After applying custom sharpening filter")
 plt.imshow(sharpened_image, cmap='gray')
 plt.axis('off')

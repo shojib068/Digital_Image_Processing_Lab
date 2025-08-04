@@ -18,7 +18,7 @@ def butterworth_low_pass_filter(shape, cutoff, order=2):
     return H_2ch
 
 # Input image
-img = cv2.imread('input_images/cameraman.tif', 0)
+img = cv2.imread('input_images/20701068_Q9_input.tif', 0)
 
 # DFT
 dft = cv2.dft(np.float32(img), flags=cv2.DFT_COMPLEX_OUTPUT)
